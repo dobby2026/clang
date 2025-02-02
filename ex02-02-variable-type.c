@@ -48,8 +48,6 @@ int main(void)
     printf("%c\n", in1);
     printf("%d\n", in1);
 
-    
-
 
     return 0;
 }
