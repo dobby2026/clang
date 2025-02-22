@@ -9,7 +9,13 @@ Q3
 
 void findMinMax(int *arr, int size, int *min, int *max)
 {
-    // 이 부분을 완성하세요
+    *min = *max = *arr;
+
+    for(int i = 1; i < size; i++) {
+        if(*min > *(arr + i)) *min = *(arr + i);
+        if(*max < *(arr + i)) *max = *(arr + i);
+    }
+
 }
 
 int main(void)

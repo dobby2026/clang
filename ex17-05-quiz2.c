@@ -11,7 +11,22 @@ quiz2
 
 void rotateRight(int *arr, int size) 
 {
-    // 이 부분을 완성하세요
+    /*
+    int last = *(arr + size - 1);
+
+    for(int i = 0; i < size; i++) {
+        *(arr + (size - i) - 1) = *(arr + (size - i) - 2);
+    }
+    *arr = last;
+    */
+
+    int last = arr[size - 1];
+
+    for(int i = 0; i < size; i++) {
+        arr[(size - i) - 1] = arr[(size - i) - 2];
+    }
+    arr[0] = last;
+
 }
 
 int main(void) 
@@ -20,6 +35,10 @@ int main(void)
     rotateRight(number, 5);
 
     // number 배열 순차적 출력(printf) 완성하세요
+    for(int i = 0; i < 5; i++) {
+        printf("%d\n", number[i]);
+    }
+
 
     return 0;
 }

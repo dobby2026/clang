@@ -7,7 +7,23 @@
 
 void reverseNumber(int n)
 {
-    // 이 부분을 완성하세요
+    /*
+    if(n < 1) return;
+
+    int result = n % 10;
+    n = n / 10; 
+    printf("%d", result);
+
+    reverseNumber(n);
+    */
+
+    if(n < 10) {
+        printf("%d", n);
+        return;
+    }
+    printf("%d", n % 10);
+    reverseNumber(n / 10);
+    
 
 }
 
@@ -15,6 +31,5 @@ int main(void)
 {
     int num = 1234;
     reverseNumber(num);
-
     return 0;
 }

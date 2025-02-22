@@ -10,13 +10,23 @@ Q1
 
 void getDifference(int *num1, int *num2, int *result)
 {
-    // 이 부분을 완성하세요
+    /*
+    if (*num1 > *num2) {
+        *result = *num1 - *num2;
+    } else {
+        *result = *num2 - *num1;
+    }
+    */
+
+    *result = *num1 - *num2;
+    if (*result < 0)  *result *= -1;
+    
 }
 
 int main(void)
 {
 
-    int a = 15, b = 7, diff;
+    int a = 7, b = 15, diff;
     getDifference(&a, &b, &diff);
 
     printf("두 수의 차이: %d\n", diff);
