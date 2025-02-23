@@ -24,7 +24,17 @@ int main(void)
     printf("Enter a string: "); // 사용자에게 문자열 입력 요청
 
     while((c = getchar()) != '\n' && c != EOF) {
+        /*
+        len = 0;
+        buffer_size = 1 
+        c = 'a'
+        str[0] =  'a'
+
+        len = 1
+        buffer_size = 2
         
+        
+        */
         str[len++] = c;
 
         if(len == buffer_size) {
